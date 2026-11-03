@@ -1,0 +1,14 @@
+# Showcase fork only (never part of an upstream pull request).
+version: 1
+app:
+  install: "npm ci"
+  start: npx webpack serve --config config/webpack.dev.js --host 0.0.0.0 --port {port}
+  url: http://localhost:{port}
+  readyPath: /
+  readyStatus: 200
+  runtime: node22
+  env:
+    NODE_ENV: development
+demo:
+  maxVideos: 1
+  beforePass: true
